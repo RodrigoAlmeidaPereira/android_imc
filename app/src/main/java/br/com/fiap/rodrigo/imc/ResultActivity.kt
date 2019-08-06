@@ -16,33 +16,53 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         loadData()
-        caluclate()
+        calculate()
     }
 
-    private fun caluclate() {
+    private fun calculate() {
         val imc = weight / (height * height)
-        tvImc.text = imc.toString()
+        tvImc.text = imc.toFixed(2)
 
         when {
             imc < 18.5 -> {
                 tvStatusImc.text = "Abaixo do peso"
-                setImage(R.drawable.fem_abaixo)
+                if (sex.equals(R.string.label_sex_female)) {
+                    setImage(R.drawable.fem_abaixo)
+                } else {
+                    setImage(R.drawable.masc_abaixo)
+                }
             }
             imc < 24.9 -> {
                 tvStatusImc.text = "Peso ideal"
-                setImage(R.drawable.fem_ideal)
+                if (sex.equals(R.string.label_sex_female)) {
+                    setImage(R.drawable.fem_ideal)
+                } else {
+                    setImage(R.drawable.masc_ideal)
+                }
             }
             imc < 29.9 -> {
                 tvStatusImc.text = "Levemente acima do peso"
-                setImage(R.drawable.fem_sobre)
+                if (sex.equals(R.string.label_sex_female)) {
+                    setImage(R.drawable.fem_sobre)
+                } else {
+                    setImage(R.drawable.masc_sobre)
+                }
             }
             imc < 34.9 -> {
                 tvStatusImc.text = "Obeso"
-                setImage(R.drawable.fem_obeso)
+                if (sex.equals(R.string.label_sex_female)) {
+                    setImage(R.drawable.fem_obeso)
+                } else {
+                    setImage(R.drawable.masc_obeso)
+                }
             }
             else -> {
                 tvStatusImc.text = "Extremamente Obeso"
-                setImage(R.drawable.fem_extremo_obeso)
+                if (sex.equals(R.string.label_sex_female)) {
+                    setImage(R.drawable.fem_extremo_obeso)
+                } else {
+                    setImage(R.drawable.masc_extremo_obeso)
+                }
             }
         }
     }
