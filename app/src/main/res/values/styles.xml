@@ -11,6 +11,7 @@
     <style name="form_label">
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:color">@color/colorPrimaryText</item>
     </style>
 
 </resources>

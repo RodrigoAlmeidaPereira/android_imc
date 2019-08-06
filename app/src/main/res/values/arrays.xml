@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sex">
+        <item>@string/label_choose_sex</item>
+        <item>@string/label_sex_male</item>
+        <item>@string/label_sex_female</item>
+    </string-array>
+    <string name="label_choose_sex">Escolha o sexo</string>
+</resources>

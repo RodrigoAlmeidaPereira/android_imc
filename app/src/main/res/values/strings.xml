@@ -4,6 +4,10 @@
     <string name="label_weight">Peso</string>
     <string name="label_height">Altura</string>
     <string name="label_sex">Sexo</string>
+    <string name="label_sex_male">Masculino</string>
+    <string name="label_sex_female">Feminino</string>
     <string name="button_clear">Limpar</string>
     <string name="button_calculate">Calcular</string>
+    <string name="label_result_value">Resultado</string>
+    <string name="app_owner">Desenvolvido por Rodrigo</string>
 </resources>
